@@ -1,2 +1,2 @@
 # dnb
-Digital Notice Board
+Restaurant Digaital Board
