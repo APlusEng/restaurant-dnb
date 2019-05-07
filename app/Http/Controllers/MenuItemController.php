@@ -95,6 +95,7 @@ class MenuItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+		$this->model->destroy($id);
+		return redirect()->route('admin.menu-item.index')->with(['message' => 'Menu Item Deleted Successfully']);
     }
 }

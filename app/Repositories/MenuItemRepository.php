@@ -71,6 +71,7 @@ class MenuItemRepository implements MenuItemInterface
 	 */
 	public function destroy($id)
 	{
-		return $this->menuItem->delete($id);
+		$this->menuItem = $this->find($id);
+		return $this->menuItem->delete();
 	}
 }

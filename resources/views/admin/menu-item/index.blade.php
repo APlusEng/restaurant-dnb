@@ -6,7 +6,11 @@
             @include('includes.admin.sidebar')
             <div class="col-md-9 float-md-right">
                 <div class="card">
-                    <div class="card-header">{{ __('Menu Items') }}</div>
+                    <div class="card-header">
+                        {{ __('Menu Items') }}
+                        <a class="btn btn-primary btn-sm float-right" href="{{ route('admin.menu-item.create') }}" >Add
+                            New</a>
+                    </div>
                     <div class="card-body">
                         @include('includes.admin.message')
                     @if($menuItems->count() > 0)

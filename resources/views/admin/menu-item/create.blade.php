@@ -32,7 +32,7 @@
                             }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="price" type="text" class="form-control{{ $errors->has('title') ? '
+                                    <input id="price" type="text" class="form-control{{ $errors->has('price') ? '
                                 is-invalid' : '' }}" name="price" value="{{ old('price') }}"
                                            required
                                            autofocus>
