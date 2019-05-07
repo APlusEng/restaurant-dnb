@@ -8,7 +8,8 @@
                 <div class="card">
                     <div class="card-header">{{ __('News') }}</div>
                     <div class="card-body">
-                        @if($news->count() > 0)
+                        @include('includes.admin.message')
+                    @if($news->count() > 0)
                             <table class="table table-sm">
                                 <thead class="thead-dark">
                                 <tr>

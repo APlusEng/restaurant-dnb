@@ -6,10 +6,10 @@
             @include('includes.admin.sidebar')
             <div class="col-md-9 float-md-right">
                 <div class="card">
-                    <div class="card-header">{{ __('Notices') }}</div>
+                    <div class="card-header">{{ __('Sliders') }}</div>
                     <div class="card-body">
                         @include('includes.admin.message')
-                    @if($notices->count() > 0)
+                    @if($sliders->count() > 0)
                         <table class="table table-sm">
                             <thead class="thead-dark">
                             <tr>
@@ -21,15 +21,15 @@
 
                             </thead>
                             <tbody>
-                            @foreach($notices as $notice)
+                            @foreach($sliders as $slider)
                             <tr>
-                                <td>{{ $notice->id }}</td>
-                                <td>{{ $notice->title }}</td>
-                                <td>{{ $notice->image }}</td>
+                                <td>{{ $slider->id }}</td>
+                                <td>{{ $slider->title }}</td>
+                                <td>{{ $slider->image }}</td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary" href="{{ route('admin.notice.edit', $notice->id)
+                                    <a class="btn btn-sm btn-primary" href="{{ route('admin.slider.edit', $slider->id)
                                     }}">Edit</a>
-                                    <form method="POST" action="{{ route('admin.notice.destroy', ['id' => $notice->id])
+                                    <form method="POST" action="{{ route('admin.slider.destroy', ['id' => $slider->id])
                                     }}" style="display: inline-block"><button type="submit" class="btn btn-sm
                                     btn-danger">Delete</button>
                                     @csrf
@@ -39,7 +39,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{ $notices->links() }}
+                        {{ $sliders->links() }}
                         @endif
                     </div>
                 </div>

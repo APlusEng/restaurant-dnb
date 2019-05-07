@@ -26,5 +26,7 @@ Route::group(['after' => 'auth', 'prefix' => 'admin'], function () {
 	Route::resource('video', 'VideoController', ['as' => 'admin']);
 	Route::resource('news', 'NewsController', ['as' => 'admin']);
 	Route::resource('advertisement', 'AdvertisementController', ['as' => 'admin']);
+	Route::resource('slider', 'SliderController', ['as' => 'admin'])->except('show');
+	Route::resource('menu-item', 'MenuItemController', ['as' => 'admin'])->except('show');
 });
 

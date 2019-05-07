@@ -21,6 +21,14 @@
                 <li><a href="{{ route('admin.advertisement.index') }}">Advertisement</a></li>
                 <li><a href="{{ route('admin.advertisement.create') }}">Add New Advertisement</a></li>
             </ul>
+            <ul>
+                <li><a href="{{ route('admin.slider.index') }}">Slider</a></li>
+                <li><a href="{{ route('admin.slider.create') }}">Add New Slider</a></li>
+            </ul>
+            <ul>
+                <li><a href="{{ route('admin.menu-item.index') }}">Menu Items</a></li>
+                <li><a href="{{ route('admin.menu-item.create') }}">Add New Menu Item</a></li>
+            </ul>
         </div>
     </div>
 </div>
